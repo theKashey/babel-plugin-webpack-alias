@@ -1,6 +1,7 @@
 {
-  "name": "babel-plugin-webpack-alias",
-  "description": "babel 6 plugin which allows to use webpack aliases",
+  "name": "babel-plugin-webpack-resolve-imports",
+  "version": "0.0.1",
+  "description": "babel 6 plugin which allows to use webpack aliases in ES6 imports",
   "main": "build/index.js",
   "scripts": {
     "build": "babel src -d build",

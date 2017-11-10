@@ -1,4 +1,4 @@
-import path from 'path';
+//import path from 'path';
 import test from 'ava';
 import {transformFixture, readFixture} from './utils';
 
@@ -8,6 +8,14 @@ test('basic require with default webpack name', t => {
     t.is(actual, expected);
 });
 
+test('using the import syntax', t => {
+    const actual = transformFixture('import/source.js', {config: './runtime.webpack.config.js'});
+    const expected = readFixture('import/expected.js');
+
+    t.is(actual, expected);
+});
+
+/*
 test('basic require with es6 webpack config', t => {
     const actual = transformFixture('basic/absolute.js', {config: './webpack.config.babel.js'});
     const expected = readFixture('basic/expected.js');
@@ -47,13 +55,6 @@ test('requiring files from the root', t => {
 test('requiring module from by alternate name', t => {
     const actual = transformFixture('module/source.js', {config: './runtime.webpack.config.js'});
     const expected = readFixture('module/expected.js');
-    t.is(actual, expected);
-});
-
-test('using the import syntax', t => {
-    const actual = transformFixture('import/source.js', {config: './runtime.webpack.config.js'});
-    const expected = readFixture('import/expected.js');
-
     t.is(actual, expected);
 });
 
@@ -115,3 +116,4 @@ test('doesnt output extensions when noOutputExtension is set to true', t => {
     const expected = readFixture('no-extension/expected.js');
     t.is(actual, expected);
 });
+*/

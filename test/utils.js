@@ -1,11 +1,12 @@
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
+import {readFileSync} from 'fs';
+import {resolve} from 'path';
 const babel = require('babel-core'); // eslint-disable-line import/no-commonjs
 
 const plugin = resolve(__dirname, '../src/index.js');
 
 export function transformFixture(name, configuration) {
     return babel.transformFileSync(resolve(__dirname, 'fixtures', name), {
+        babelrc: false,
         plugins: [
             configuration ? [plugin, configuration] : plugin,
         ],
