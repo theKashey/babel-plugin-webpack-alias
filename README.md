@@ -1,5 +1,8 @@
 
-# babel-plugin-webpack-alias
+# babel-plugin-webpack-resolve-imports
+
+# Fork of the babel-plugin-webpack-alias. 
+The goal - just support imports. Why not to merge? Not worth.
 
 > This Babel 6 plugin allows you to use webpack aliases and most of webpack `resolve` features in Babel.
 
